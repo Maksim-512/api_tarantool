@@ -7,27 +7,36 @@ ___
 ## Инструкция по запуску
 ___
 ### 1. Клонирование репозитория
-Клонируйте репозиторий и перейдите в директорию проекта:
+Клонируйте репозиторий:
 ```bash
 git clone https://github.com/Maksim-512/api_tarantool.git
+```
+
+Перейдите в директорию проекта:
+```bash
 cd api_tarantool
 ```
 
 ### 2. Установка зависимостей
-Создайте и активируйте виртуальное окружение:
+Создайте виртуальное окружение:
 ```bash
 python3 -m venv venv
-source venv/bin/activate
-```
-Установите зависимости из файла requirements.txt:
-```bash
-pip install -r requirements.txt
 ```
 
+Активируйте виртуальное окружение:
+```bash
+source venv/bin/activate
+```
+
+
 ### 3. Настройка Tarantool
-Соберите и запустите контейнеры с помощью Docker Compose:
+Соберите контейнеры с помощью Docker Compose:
 ```bash
 docker-compose build
+```
+
+Запустите контейнеры:
+```bash
 docker-compose up
 ```
 
