@@ -10,7 +10,7 @@ ___
 Клонируйте репозиторий и перейдите в директорию проекта:
 ```bash
 git clone https://github.com/Maksim-512/api_tarantool.git
-cd tarantool-docker
+cd api_tarantool
 ```
 
 ### 2. Установка зависимостей
