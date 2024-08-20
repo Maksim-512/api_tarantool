@@ -11,7 +11,7 @@ app = web.Application()
 routes = web.RouteTableDef()
 
 users = {
-    'admin': 'presalet'
+    'admin': 'presale'
 }
 
 
