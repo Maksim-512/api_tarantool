@@ -1,0 +1,23 @@
+version: '3'
+services:
+  tarantool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tarantool_container
+    ports:
+      - "3301:3301"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: api_container
+    depends_on:
+      - tarantool
+    ports:
+      - "5005:5005"
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: ["python3", "api_tarantool.py"]

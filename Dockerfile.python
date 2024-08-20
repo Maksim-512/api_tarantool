@@ -1,0 +1,10 @@
+FROM python:3.9
+
+COPY . .
+WORKDIR /usr/src/app
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+EXPOSE 5005
+
+CMD ["python3", "api_tarantool.py"]
